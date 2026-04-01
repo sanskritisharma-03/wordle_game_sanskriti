@@ -1,0 +1,194 @@
+body {  
+  /*this part of the code targets the entire webpage using georgia font, i also used alignment for better hierarchy and set margin and padding at 0 because my original webpage had a lot of void space*/
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: #120002;
+  color: #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  /*i set the heading part to take 100% of viewport height so that i can utilize the entire height of the screen, set a bg image, used cover to ensure that my image fills the background completely*/
+  /*i also used flexbox to align things because i struggled to place elements in a neat manner, also used to justify and align-tems for vertical and horizontal alignment*/
+  height: 100vh;
+  background-image: url(hi.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading h1 {
+  /*i played with fonts a bit and set the margin at 0 to remove default space */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 95px;
+  letter-spacing: 10px;
+  color: rgb(254, 246, 204);
+  margin: 0;
+}
+.heading p { /*this is the description*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color: rgb(252, 248, 204);
+}
+.heading .begin_button {
+  padding: 15px 32px; /*size of the button decided by padding*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  background-color: rgb(254, 246, 204);
+  color: rgba(97, 49, 21, 0.865);
+  border: none;
+  border-radius: 10px;
+}
+
+.info {
+  /*we create space inside our page and give it a max width which if exceeded would lead to a new line */
+  /*again we set margin at 0, mainly for horizontal alignment*/
+  padding: 80px 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.info h2 {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 32px;
+  color: #f5db92;
+}
+.info p {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+header {
+  padding: 40px 0 20px; /*40px of space at the top, 0 on the sides,20px at bottom*/
+}
+header h1 { /*how our game title would like*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  letter-spacing: 9px;
+  margin: 0;
+}
+header .starter {/*this is the subline/subtitle*/
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin: 10px; /*margin given only at top*/
+}
+#score { /*would keep a track of your streaks*/
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: #f5db92;
+  margin: 6px;
+}
+
+#gaming_arena { /*would centralluy align the grid while providing 10px above*/
+  margin: 10px auto;
+}
+.row {
+  display: flex; /*used flexbox again to align all the boxes in one single line*/
+  justify-content: center; /*centralize content*/
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.box {
+  width: 55px;
+  height: 55px;
+  border: 4px solid grey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 28px;
+  color: white;
+  line-height: 54px;
+}
+.box.green {
+  background-color: #416f3d;
+}
+.box.yellow {
+  background-color: #b39f47;
+}
+.box.grey {
+  background-color: #4d4d4d;
+}
+
+#input-area {
+  margin: 30px auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+#guess-input { /*this is the text box*/
+  padding: 9px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 18px;
+  width: 200px;
+  text-align: center;
+  background-color: #1a1a1b;
+  color: white;
+  border: 2px solid grey;
+  border-radius: 8px;
+}
+#input-area button { /*we submit our responses using this*/
+  padding: 12px 24px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: #538d4e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#message { /*this is the design for how our win/loss message is going to look like*/
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 16px;
+}
+
+#restart-button { /*restart button design*/
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #2a2a2c;
+  color: white;
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+
+/* this is to make it work for a mobile screen */
+@media (max-width: 600px) {
+  header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+  .heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 55px;
+  }
+  #gaming_arena {
+    margin: 6px auto;
+  }
+  .box {
+    width: 42px;
+    height: 42px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 42px; 
+  }
+
+  #input-area {
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px auto;
+  }
+  #guess-input {
+    width: 180px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  #input-area button {
+    padding: 10px 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+}

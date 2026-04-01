@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>Wordle</title>
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+  <header>
+    <h1>WORDLE</h1>
+    <p class="starter">Guess the word in 6 tries</p>
+    <p id="score"></p>
+  </header>
+  <div id="gaming_arena"></div>
+
+  <div id="input-area">
+    <input type="text" id="guess-input" maxlength="5" placeholder="Enter a 5 lettered word">
+    <button onclick="enterword()">Enter</button>
+  </div>
+
+  <p id="message"></p>
+
+  <button id="restart-button" onclick="restart()">Restart</button>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
