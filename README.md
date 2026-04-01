@@ -2,8 +2,15 @@
 
 ## **WHAT DO WE DO IN WORDLE?**
 
-Pick a random five-letter word from the database. You have six chances to guess the word. The colors of the letters will change after each guess to give you clues.
+Pick a random five-letter word from the database.
+
+You have six chances to guess the word. The colors of the letters will change after each guess to give you clues.
+
 Green: The letter is in the right place in the word.
+
+Yellow: The letter is in the wrong position but exists in the word
+
+Grey: Does not exist in the word
 
 ## **FEATURES**
 
